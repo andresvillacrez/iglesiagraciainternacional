@@ -1,0 +1,14 @@
+# Netlify / Cloudflare Pages
+# Redirige las URLs antiguas de WordPress a las nuevas páginas .html
+/soy-nuevo/     /soy-nuevo.html    301
+/soy-nuevo      /soy-nuevo.html    301
+/galeria/       /galeria.html      301
+/galeria        /galeria.html      301
+/donaciones/    /donaciones.html   301
+/donaciones     /donaciones.html   301
+/comunidad/     /comunidad.html    301
+/comunidad      /comunidad.html    301
+/contacto/      /contacto.html     301
+/contacto       /contacto.html     301
+/sample-page/   /index.html        301
+/sample-page    /index.html        301
