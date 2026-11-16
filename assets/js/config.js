@@ -24,6 +24,16 @@ window.IGRACIA_CONFIG = {
       "https://www.google.com/maps/search/?api=1&query=Cl.%202%20%234-26%2C%20Fusagasug%C3%A1%2C%20Colombia"
   },
 
+  /* Banner principal: el primer slide es la imagen base.
+     Los siguientes son anuncios. Si dejas solo uno, no hay carrusel. */
+  hero: {
+    slides: [
+      { image: "assets/img/comunidad-1.jpeg", label: "Comunidad" },
+      { image: "assets/img/gallery-16.jpg", label: "Reunión" },
+      { image: "assets/img/gallery-22.jpg", label: "Comunidad Gracia" }
+    ]
+  },
+
   links: {
     whatsapp: "https://wa.link/y4h3b3",
     instagram: "https://www.instagram.com/iglesiagraciainternacional/",
