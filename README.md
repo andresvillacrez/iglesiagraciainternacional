@@ -4,6 +4,9 @@ Recreación estática, moderna y autocontenida del sitio **https://www.igracia.o
 Está construida en HTML, CSS y JavaScript puro (sin WordPress ni dependencias de
 compilación), lista para publicarse en cualquier hosting estático.
 
+**Demo en vivo (GitHub Pages):**
+https://andresvillacrez.github.io/iglesiagraciainternacional/
+
 > **Importante:** las imágenes, logos y textos provienen del sitio público de la
 > iglesia y se conservan aquí como material de la propia iglesia. Verifica y
 > autoriza su uso antes de publicar. Revisa también `MEJORAS.md` para el plan de
@@ -189,11 +192,26 @@ El sitio es 100 % estático. Opciones recomendadas:
 2. `vercel.json` incluye redirecciones 301 y cabeceras de caché/seguridad.
 3. Asigna el dominio en el panel de Vercel.
 
-### GitHub Pages
-1. Sube el contenido a un repositorio.
-2. Activa Pages desde la rama principal.
-3. Ten en cuenta que las URLs serán `.html`; si usas un dominio propio, añade
-   un archivo `CNAME`.
+### GitHub Pages (ya configurado)
+El sitio ya está publicado en:
+
+- https://andresvillacrez.github.io/iglesiagraciainternacional/
+
+El repositorio incluye `.github/workflows/pages.yml`, que despliega
+automáticamente en cada push a `main`. La primera vez se habilitó Pages con
+origen **GitHub Actions**.
+
+Para usar el dominio propio `www.igracia.org`:
+1. En GitHub → **Settings → Pages → Custom domain**, escribe `www.igracia.org`.
+2. En el proveedor de DNS crea un `CNAME` para `www` apuntando a
+   `andresvillacrez.github.io`.
+3. Activa **Enforce HTTPS**.
+4. Si quieres que el dominio raíz (`igracia.org`) también funcione, configura
+   los registros `A` de GitHub Pages y una redirección hacia `www`.
+
+> Mientras no se configure el dominio propio, el sitio funciona en la URL de
+> GitHub Pages. Los metadatos `canonical` y `og:image` apuntan a
+> `https://www.igracia.org/`, que es el destino final previsto.
 
 ### Apache / cPanel
 1. Sube todo el contenido a `public_html`.
