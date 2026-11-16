@@ -134,6 +134,7 @@ Oportunidades:
 | Formularios | Validación, estados de envío y endpoint configurable |
 | PWA | Manifest, íconos y service worker con soporte offline |
 | Bienvenida | Splash screen negra con logo blanco, salida automática y botón Entrar |
+| Transmisiones | Banner de YouTube con estado EN VIVO, última transmisión y selector de anteriores |
 | Despliegue | `_redirects`, `vercel.json` y `.htaccess` con redirecciones 301 |
 | Documentación | `README.md`, `MEJORAS.md` y configuración centralizada |
 

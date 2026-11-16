@@ -196,6 +196,43 @@ splash: {
 - Si cambias el logo, reemplaza `logo-splash.png` manteniendo fondo transparente
   y letras blancas.
 
+### 4.6 Banner de transmisiones de YouTube
+
+La página de inicio incluye un banner que muestra:
+
+- La transmisión **EN VIVO** cuando el canal está transmitiendo.
+- Si no hay transmisión, la **última transmisión** disponible.
+- Un selector con las transmisiones anteriores.
+
+Configuración y datos:
+
+- `assets/js/config.js` → `youtube` (`channelId`, `channelUrl`, `dataUrl`).
+- `assets/data/youtube.json` y `assets/data/youtube.js` → estado y listado de
+  transmisiones (el `.js` permite que el banner funcione al abrir el HTML
+  directamente).
+- Actualización manual:
+
+  ```powershell
+  python tools/update_youtube.py
+  ```
+
+- En GitHub Pages, `.github/workflows/pages.yml` ejecuta el script antes de
+  desplegar y también **cada 20 minutos**. Si YouTube no responde, se conserva
+  el último JSON y el sitio sigue funcionando.
+- La detección de “EN VIVO” usa `isLiveNow`; el campo `isLive` no basta porque
+  también aparece en repeticiones y transmisiones programadas.
+- El botón **Ver en vivo** abre directamente
+  `https://www.youtube.com/@iglesiagraciainternacional/live`, por lo que siempre
+  lleva al estado real del canal.
+- Para cambiar de canal, actualiza `channelId`/`channelUrl` en `config.js` y las
+  constantes `HANDLE`/`CHANNEL_ID` en `tools/update_youtube.py`.
+
+> **Error 153 / el video no reproduce:** ocurre cuando el HTML se abre con doble
+> clic (`file://`) o cuando YouTube no recibe un referer válido. Para probar el
+> reproductor usa un servidor local (`python -m http.server`). Si aun así no
+> carga, el banner muestra una portada con enlace directo a YouTube y el botón
+> **Ver en YouTube**.
+
 ---
 
 ## 5. Publicación

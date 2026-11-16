@@ -93,6 +93,7 @@
     <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 3h7v7h-2V6.4l-7.3 7.3-1.4-1.4L17.6 5H14V3zM5 5h5v2H7v10h10v-3h2v5H5V5z"/></symbol>
     <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 2l1.6 6.4L20 10l-6.4 1.6L12 18l-1.6-6.4L4 10l6.4-1.6z"/></symbol>
     <symbol id="i-quote" viewBox="0 0 24 24"><path d="M7 6h4v5H8v2h3v5H6V8a2 2 0 0 1 1-2zm10 0h4v5h-3v2h3v5h-5V8a2 2 0 0 1 1-2z"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></symbol>
   </svg>
 
   <header class="site-header" id="siteHeader">
@@ -142,6 +143,7 @@
             <li><a class="nav__link" href="index.html#nosotros">¿Quiénes Somos?</a></li>
             <li><a class="nav__link" data-nav="comunidad" href="comunidad.html">Fundación La Luz</a></li>
             <li><a class="nav__link" data-nav="galeria" href="galeria.html">Galería</a></li>
+            <li><a class="nav__link" href="index.html#transmisiones">Transmisiones</a></li>
             <li><a class="nav__link" data-nav="donaciones" href="donaciones.html">Donaciones</a></li>
             <li><a class="nav__link" data-nav="contacto" href="contacto.html">Contáctenos</a></li>
           </ul>
@@ -172,6 +174,10 @@
             <a class="btn btn--primary" href="#nosotros">
               Conócenos
               <svg class="icon btn__icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+            </a>
+            <a class="btn btn--ghost" href="#transmisiones">
+              <svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>
+              Transmisiones
             </a>
             <a class="btn btn--ghost" href="contacto.html">Contáctenos</a>
           </div>
@@ -228,6 +234,71 @@
         </div>
       </div>
     </div>
+
+    <!-- TRANSMISIONES -->
+    <section class="section section--soft live-section" id="transmisiones">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">Transmisiones</span>
+          <h2>Vive nuestras reuniones en línea</h2>
+          <p>Domingos 10:00 a.m. y miércoles 6:30 p.m. por YouTube. Si no estamos en vivo, puedes ver la transmisión más reciente.</p>
+        </div>
+
+        <div class="live-banner reveal" id="liveBanner">
+          <div class="live-player">
+            <span class="live-status" id="liveStatus" data-state="loading">
+              <span class="live-status__dot" aria-hidden="true"></span>
+              <span id="liveStatusText">Cargando…</span>
+            </span>
+            <iframe id="livePlayer" title="Reproductor de transmisiones de Iglesia Gracia Internacional" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>
+            <a class="live-fallback" id="liveFallback" href="https://www.youtube.com/@iglesiagraciainternacional" target="_blank" rel="noopener" aria-label="Ver en YouTube" hidden>
+              <img id="liveFallbackImg" src="" alt="" />
+              <span class="live-fallback__inner">
+                <span class="live-fallback__play">
+                  <svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>
+                </span>
+                <span class="live-fallback__label">Ver en YouTube</span>
+              </span>
+            </a>
+          </div>
+
+          <div class="live-info">
+            <span class="live-banner__eyebrow">Canal oficial de YouTube</span>
+            <h3 id="liveTitle">Transmisiones de Iglesia Gracia</h3>
+            <p class="live-banner__meta" id="liveMeta">Conectando con YouTube…</p>
+            <p class="live-banner__desc">Acompáñanos en vivo desde cualquier lugar. También puedes explorar las transmisiones anteriores y compartirlas con tu familia.</p>
+            <div class="live-actions">
+              <a class="btn btn--primary btn--sm" id="liveJoin" href="https://www.youtube.com/@iglesiagraciainternacional/live" target="_blank" rel="noopener">
+                <svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>
+                Ver en vivo
+              </a>
+              <a class="btn btn--ghost btn--sm" id="liveWatch" href="https://www.youtube.com/@iglesiagraciainternacional" target="_blank" rel="noopener">
+                <span data-label>Ver en YouTube</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-external"></use></svg>
+              </a>
+            </div>
+            <p class="live-note">La información se actualiza automáticamente desde YouTube. Si el reproductor no carga, usa el botón “Ver en YouTube”.</p>
+            <noscript><p class="live-note">Activa JavaScript para ver el reproductor. También puedes visitar nuestro <a href="https://www.youtube.com/@iglesiagraciainternacional" target="_blank" rel="noopener">canal de YouTube</a>.</p></noscript>
+          </div>
+        </div>
+
+        <div class="live-history reveal">
+          <div class="live-history__head">
+            <h3>Transmisiones anteriores</h3>
+            <div class="live-history__actions">
+              <button class="live-arrow" id="livePrev" type="button" aria-label="Ver transmisiones anteriores">
+                <svg class="icon" aria-hidden="true" style="transform:rotate(180deg)"><use href="#i-arrow"></use></svg>
+              </button>
+              <button class="live-arrow" id="liveNext" type="button" aria-label="Ver más transmisiones">
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+              </button>
+              <a href="https://www.youtube.com/@iglesiagraciainternacional/streams" target="_blank" rel="noopener" id="liveStreams">Ver todas en YouTube</a>
+            </div>
+          </div>
+          <div class="live-list" id="liveList" aria-label="Seleccionar una transmisión anterior"></div>
+        </div>
+      </div>
+    </section>
 
     <!-- NOSOTROS -->
     <section class="section" id="nosotros">
@@ -542,6 +613,7 @@
             <li><a href="index.html#nosotros">¿Quiénes somos?</a></li>
             <li><a href="comunidad.html">Fundación La Luz</a></li>
             <li><a href="galeria.html">Galería</a></li>
+            <li><a href="index.html#transmisiones">Transmisiones</a></li>
             <li><a href="donaciones.html">Donaciones</a></li>
             <li><a href="contacto.html">Contáctenos</a></li>
           </ul>
@@ -624,6 +696,8 @@
 
   <script src="assets/js/config.js"></script>
   <script src="assets/js/chatbot.js"></script>
+  <script src="assets/data/youtube.js"></script>
+  <script src="assets/js/youtube.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

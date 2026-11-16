@@ -37,8 +37,9 @@
     }
 
     var splashSeen = document.documentElement.classList.contains("splash-skip");
+    var forceNoSplash = /(?:\?|&)nosplash(?:&|=|$)/.test(window.location.search);
 
-    if (splashCfg.enabled === false || splashSeen) {
+    if (splashCfg.enabled === false || splashSeen || forceNoSplash) {
       if (splash.parentNode) splash.parentNode.removeChild(splash);
     } else {
       document.body.classList.add("splash-open");
@@ -55,7 +56,7 @@
         document.body.classList.remove("splash-open");
         window.setTimeout(function () {
           if (splash && splash.parentNode) splash.parentNode.removeChild(splash);
-        }, 700);
+        }, 1050);
       };
 
       var splashDuration = Number(splashCfg.duration || 2600);

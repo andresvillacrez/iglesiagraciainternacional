@@ -4,6 +4,10 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    # Actualiza el estado de YouTube y redespliega cada 10 minutos.
+    # Puedes cambiarlo a "*/5 * * * *" si necesitas más inmediatez.
+    - cron: "*/10 * * * *"
 
 permissions:
   contents: read
@@ -24,6 +28,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Update YouTube data
+        continue-on-error: true
+        run: python tools/update_youtube.py
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
         with:
@@ -36,6 +44,7 @@ jobs:
             --exclude='.git' \
             --exclude='.github' \
             --exclude='dist' \
+            --exclude='tools' \
             --exclude='README.md' \
             --exclude='MEJORAS.md' \
             ./ dist/

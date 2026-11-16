@@ -64,5 +64,12 @@ window.IGRACIA_CONFIG = {
     enabled: true,
     duration: 2600,
     oncePerSession: true
+  },
+
+  /* YouTube: banner de transmisiones */
+  youtube: {
+    channelId: "UC2Y10_965PnaAntW5T4u4rg",
+    channelUrl: "https://www.youtube.com/@iglesiagraciainternacional",
+    dataUrl: "assets/data/youtube.json"
   }
 };

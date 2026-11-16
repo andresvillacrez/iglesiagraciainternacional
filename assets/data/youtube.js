@@ -1,0 +1,107 @@
+window.IGRACIA_YOUTUBE = {
+  "channelId": "UC2Y10_965PnaAntW5T4u4rg",
+  "channelUrl": "https://www.youtube.com/@iglesiagraciainternacional",
+  "liveUrl": "https://www.youtube.com/@iglesiagraciainternacional/live",
+  "streamsUrl": "https://www.youtube.com/@iglesiagraciainternacional/streams",
+  "checkedAt": "2026-11-16T04:55:50.013356+00:00",
+  "live": false,
+  "liveVideo": null,
+  "videos": [
+    {
+      "id": "0ZmhWDIjCJ8",
+      "title": "QUE TODOS SEAN UNO Pr.Deymar Pico",
+      "duration": "2:09:22",
+      "published": "Transmitido hace 2 meses",
+      "views": "70 vistas",
+      "thumbnail": "https://i.ytimg.com/vi/0ZmhWDIjCJ8/mqdefault.jpg"
+    },
+    {
+      "id": "vT2ltU8oEEM",
+      "title": "QUE TODOS SEAN UNO Pr.Deymar Pico",
+      "duration": "2:09:02",
+      "published": "Transmitido hace 2 meses",
+      "views": "23 vistas",
+      "thumbnail": "https://i.ytimg.com/vi/vT2ltU8oEEM/mqdefault.jpg"
+    },
+    {
+      "id": "UNDdwqpWP2U",
+      "title": "CIMENTADO DOMINANDO MI CARACTER Pr.Deymar Pico",
+      "duration": "1:37:52",
+      "published": "Transmitido hace 2 meses",
+      "views": "20 vistas",
+      "thumbnail": "https://i.ytimg.com/vi/UNDdwqpWP2U/mqdefault.jpg"
+    },
+    {
+      "id": "6olrC6MXDIg",
+      "title": "CIMENTADO DOMINANDO MI CARACTER Pr.Deymar Pico",
+      "duration": "1:37:52",
+      "published": "Transmitido hace 2 meses",
+      "views": "26 vistas",
+      "thumbnail": "https://i.ytimg.com/vi/6olrC6MXDIg/mqdefault.jpg"
+    },
+    {
+      "id": "Bf0d3sE2kA0",
+      "title": "Carne vs Espiritu... LA BATALLA QUE NADIE VE. Pr. Deymar Pico",
+      "duration": "2:06:27",
+      "published": "Transmitido hace 2 meses",
+      "views": "23 vistas",
+      "thumbnail": "https://i.ytimg.com/vi/Bf0d3sE2kA0/mqdefault.jpg"
+    },
+    {
+      "id": "xRaXY3qEuAo",
+      "title": "AFÉRRATE. Pr. Deymar Pico",
+      "duration": "2:06:29",
+      "published": "Transmitido hace 2 meses",
+      "views": "11 vistas",
+      "thumbnail": "https://i.ytimg.com/vi/xRaXY3qEuAo/mqdefault.jpg"
+    },
+    {
+      "id": "FyoI-TJ28Q0",
+      "title": "Sensibilidad Espiritual Pr. Deymar Pico.",
+      "duration": "1:36:50",
+      "published": "Transmitido hace 2 meses",
+      "views": "12 vistas",
+      "thumbnail": "https://i.ytimg.com/vi/FyoI-TJ28Q0/mqdefault.jpg"
+    },
+    {
+      "id": "WlLg7se_TvU",
+      "title": "AFÉRRATE. Pr. Deymar Pico",
+      "duration": "1:36:50",
+      "published": "Transmitido hace 2 meses",
+      "views": "25 vistas",
+      "thumbnail": "https://i.ytimg.com/vi/WlLg7se_TvU/mqdefault.jpg"
+    },
+    {
+      "id": "Dc-yOoZbNrU",
+      "title": "Cuando el dolor nos enseña. Pr. Deymar Pico",
+      "duration": "24:56",
+      "published": "Transmitido hace 2 meses",
+      "views": "8 vistas",
+      "thumbnail": "https://i.ytimg.com/vi/Dc-yOoZbNrU/mqdefault.jpg"
+    },
+    {
+      "id": "vz_Xe30FhCc",
+      "title": "AFÉRRATE. Pr. Deymar Pico",
+      "duration": "24:56",
+      "published": "Transmitido hace 2 meses",
+      "views": "29 vistas",
+      "thumbnail": "https://i.ytimg.com/vi/vz_Xe30FhCc/mqdefault.jpg"
+    },
+    {
+      "id": "i2vLMIU1clU",
+      "title": "AFÉRRATE. Pr. Deymar Pico",
+      "duration": "2:05:42",
+      "published": "Transmitido hace 2 meses",
+      "views": "11 vistas",
+      "thumbnail": "https://i.ytimg.com/vi/i2vLMIU1clU/mqdefault.jpg"
+    },
+    {
+      "id": "2-ZqEvIGX-c",
+      "title": "Cuando el dolor nos enseña. Pr. Deymar Pico",
+      "duration": "2:05:21",
+      "published": "Transmitido hace 2 meses",
+      "views": "18 vistas",
+      "thumbnail": "https://i.ytimg.com/vi/2-ZqEvIGX-c/mqdefault.jpg"
+    }
+  ]
+};

@@ -1,7 +1,7 @@
 /* Iglesia Gracia Internacional — Service Worker
    Cachea los recursos estáticos y sirve una versión offline.
    Cambia CACHE_VERSION al publicar una actualización. */
-var CACHE_VERSION = "igracia-v2";
+var CACHE_VERSION = "igracia-v3";
 var OFFLINE_URL = "index.html";
 
 var PRECACHE = [
@@ -21,8 +21,10 @@ var PRECACHE = [
   "assets/fonts/playfair-display-600.woff2",
   "assets/js/config.js",
   "assets/js/chatbot.js",
+  "assets/js/youtube.js",
   "assets/js/main.js",
   "assets/img/logo-header.png",
+  "assets/img/logo-splash.png",
   "assets/img/logo-footer.png",
   "assets/img/icon-192.png",
   "assets/img/icon-512.png",
@@ -71,6 +73,16 @@ self.addEventListener("fetch", function (event) {
 
   var url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
+
+  /* Datos de YouTube: siempre intentar la red para mostrar el estado real. */
+  if (url.pathname.indexOf("/assets/data/youtube.") > -1) {
+    event.respondWith(
+      fetch(request).catch(function () {
+        return caches.match(request);
+      })
+    );
+    return;
+  }
 
   if (request.mode === "navigate") {
     event.respondWith(
