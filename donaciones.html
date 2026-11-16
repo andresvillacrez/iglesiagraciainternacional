@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="assets/css/fonts.css" />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+  <script>try{if(sessionStorage.getItem("igracia_splash_seen")==="1"){document.documentElement.classList.add("splash-skip");}}catch(e){}</script>
 
   <script type="application/ld+json">
   {
@@ -57,6 +58,17 @@
 </head>
 
 <body data-page="donaciones">
+  <!-- Splash screen de bienvenida -->
+  <div class="splash" id="splash" role="dialog" aria-label="Bienvenido a Iglesia Gracia Internacional">
+    <div class="splash__inner">
+      <img class="splash__logo" src="assets/img/logo-splash.png" alt="Iglesia Gracia Internacional" width="1000" height="422" />
+      <p class="splash__tagline">Un Lugar Diferente</p>
+      <div class="splash__loader" aria-hidden="true"><span></span></div>
+    </div>
+    <button class="splash__skip" id="splashSkip" type="button">Entrar</button>
+  </div>
+  <noscript><style>.splash{display:none!important}</style></noscript>
+
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
   <!-- Sprite de iconos -->

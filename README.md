@@ -176,6 +176,26 @@ Las imágenes están en `assets/img/gallery-01…31`. Para cambiar una foto:
 Optimiza las imágenes (WebP/AVIF, máx. ~1600 px) antes de subirlas para mantener
 el rendimiento.
 
+### 4.5 Splash screen
+
+La pantalla de bienvenida a pantalla completa se configura en
+`assets/js/config.js`:
+
+```js
+splash: {
+  enabled: true,
+  duration: 2600,        // milisegundos antes de ocultarse
+  oncePerSession: true   // true: una vez por sesión; false: en cada carga
+}
+```
+
+- Fondo negro y logo blanco: `assets/img/logo-splash.png`.
+- Se oculta sola y también con el botón **Entrar**.
+- Respeta `prefers-reduced-motion` (se oculta más rápido).
+- Para desactivarla: `enabled: false`.
+- Si cambias el logo, reemplaza `logo-splash.png` manteniendo fondo transparente
+  y letras blancas.
+
 ---
 
 ## 5. Publicación

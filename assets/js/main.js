@@ -26,6 +26,57 @@
     return String(value || "").replace(/[^\d]/g, "");
   }
 
+  /* ---------- Splash screen de bienvenida ---------- */
+  var splash = document.getElementById("splash");
+  if (splash) {
+    var splashCfg = config.splash || {};
+    var splashOnce = splashCfg.oncePerSession !== false;
+
+    if (!splashOnce) {
+      document.documentElement.classList.remove("splash-skip");
+    }
+
+    var splashSeen = document.documentElement.classList.contains("splash-skip");
+
+    if (splashCfg.enabled === false || splashSeen) {
+      if (splash.parentNode) splash.parentNode.removeChild(splash);
+    } else {
+      document.body.classList.add("splash-open");
+
+      if (splashOnce) {
+        try {
+          sessionStorage.setItem("igracia_splash_seen", "1");
+        } catch (err) {}
+      }
+
+      var splashHide = function () {
+        if (!splash || splash.classList.contains("is-hidden")) return;
+        splash.classList.add("is-hidden");
+        document.body.classList.remove("splash-open");
+        window.setTimeout(function () {
+          if (splash && splash.parentNode) splash.parentNode.removeChild(splash);
+        }, 700);
+      };
+
+      var splashDuration = Number(splashCfg.duration || 2600);
+      var splashTimer = window.setTimeout(
+        splashHide,
+        reduceMotion ? 900 : splashDuration
+      );
+
+      var splashSkipBtn = document.getElementById("splashSkip");
+      if (splashSkipBtn) {
+        splashSkipBtn.addEventListener("click", function () {
+          window.clearTimeout(splashTimer);
+          splashHide();
+        });
+        window.setTimeout(function () {
+          splashSkipBtn.focus({ preventScroll: true });
+        }, 80);
+      }
+    }
+  }
+
   /* ---------- Header + navegación ---------- */
   var header = $("#siteHeader");
   if (header) {

@@ -57,5 +57,12 @@ window.IGRACIA_CONFIG = {
       "No estoy seguro de haber entendido. Puedes escribirme sobre horarios, ubicación, donaciones, primera visita o hablar directamente con nuestro equipo por WhatsApp.",
     whatsappLabel: "Hablar con alguien",
     quickReplies: ["Horarios", "¿Cómo llego?", "Donaciones", "Soy nuevo", "Hablar con alguien"]
+  },
+
+  /* Splash screen de bienvenida */
+  splash: {
+    enabled: true,
+    duration: 2600,
+    oncePerSession: true
   }
 };
