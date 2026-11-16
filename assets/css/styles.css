@@ -2430,24 +2430,25 @@ body.splash-open {
 
 /* ---------- 20c. Banner de transmisiones ---------- */
 .live-banner {
-  display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr);
-  align-items: center;
-  gap: clamp(24px, 4vw, 46px);
-  padding: clamp(18px, 2.5vw, 30px);
-  border-radius: 28px;
+  padding: clamp(28px, 4vw, 56px) 0;
   background: radial-gradient(
-      900px 420px at 8% 0%,
+      1200px 520px at 8% 0%,
       rgba(139, 60, 240, 0.34),
       transparent 62%
     ),
     linear-gradient(150deg, var(--violet-950), var(--violet-800));
   color: #fff;
-  box-shadow: var(--shadow-lg);
+  border-block: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.live-banner__inner {
+  display: grid;
+  gap: clamp(24px, 3vw, 40px);
 }
 
 .live-player {
   position: relative;
+  width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden;
   border-radius: 18px;
@@ -2572,6 +2573,50 @@ body.splash-open {
 .live-status[data-state="offline"] .live-status__dot {
   background: var(--violet-400);
   animation: none;
+}
+
+.live-info {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "eyebrow actions"
+    "title actions"
+    "meta actions"
+    "desc actions"
+    "note note";
+  column-gap: clamp(24px, 4vw, 56px);
+  align-items: start;
+}
+
+.live-info > .live-banner__eyebrow {
+  grid-area: eyebrow;
+}
+
+.live-info > h3 {
+  grid-area: title;
+}
+
+.live-info > .live-banner__meta {
+  grid-area: meta;
+}
+
+.live-info > .live-banner__desc {
+  grid-area: desc;
+}
+
+.live-info > .live-actions {
+  grid-area: actions;
+  align-self: center;
+  justify-content: flex-end;
+  margin-top: 0;
+}
+
+.live-info > .live-note {
+  grid-area: note;
+}
+
+.live-info > noscript {
+  grid-column: 1 / -1;
 }
 
 .live-info h3 {
@@ -2958,8 +3003,21 @@ body.splash-open {
     grid-template-columns: 1fr;
   }
 
-  .live-banner {
+  .live-info {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "eyebrow"
+      "title"
+      "meta"
+      "desc"
+      "actions"
+      "note";
+  }
+
+  .live-info > .live-actions {
+    align-self: start;
+    justify-content: flex-start;
+    margin-top: 8px;
   }
 
   .pillars {
