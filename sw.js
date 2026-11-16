@@ -1,7 +1,7 @@
 /* Iglesia Gracia Internacional — Service Worker
    Cachea los recursos estáticos y sirve una versión offline.
    Cambia CACHE_VERSION al publicar una actualización. */
-var CACHE_VERSION = "igracia-v3";
+var CACHE_VERSION = "igracia-v4";
 var OFFLINE_URL = "index.html";
 
 var PRECACHE = [

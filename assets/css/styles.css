@@ -164,6 +164,10 @@ h6 {
   margin-inline: auto;
 }
 
+.container--wide {
+  width: min(100% - 40px, 1440px);
+}
+
 .section {
   padding: clamp(64px, 8vw, 108px) 0;
   position: relative;
@@ -1008,6 +1012,18 @@ h6 {
   color: #fff;
 }
 
+.testimonials .section-head h2 {
+  color: #fff;
+}
+
+.testimonials .section-head p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.testimonials .eyebrow {
+  color: var(--violet-200);
+}
+
 .slider {
   position: relative;
   max-width: 880px;
@@ -1353,11 +1369,13 @@ h6 {
 
 /* ---------- 14. Gallery ---------- */
 .gallery-grid {
-  columns: 3;
+  column-width: 300px;
   column-gap: 18px;
 }
 
 .gallery-item {
+  display: block;
+  width: 100%;
   position: relative;
   break-inside: avoid;
   margin-bottom: 18px;
@@ -2896,10 +2914,6 @@ body.splash-open {
     grid-template-columns: 1fr;
   }
 
-  .gallery-grid {
-    columns: 2;
-  }
-
   .live-banner {
     grid-template-columns: 1fr;
   }
@@ -3000,10 +3014,6 @@ body.splash-open {
 
   .quick-wrap {
     margin-top: -30px;
-  }
-
-  .gallery-grid {
-    columns: 1;
   }
 
   .live-item {
